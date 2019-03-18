@@ -177,10 +177,6 @@ static int hash(int h) {
     }
 ```
 
-## HashTable 和 ConcurrentHashMap 的区别  
-   
-Hashtable的所有操作都会锁住整个对象，虽然能够保证线程安全，但是性能较差； ConcurrentHashMap内部使用Segment数组，每个Segment类似于Hashtable，在“写”线程或者部分特殊的“读”线程中锁住的是某个Segment对象，其它的线程能够并发执行其它的Segment对象。
-
 
 ## HashMap 的长度为什么是2的幂次方
 
